@@ -1,0 +1,274 @@
+﻿<UserControl x:Class="LEDGrid.Views.Animation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LEDGrid"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        >
+    <UserControl.Resources>
+        <Style TargetType="Canvas">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ColorPicker}" Value="True">
+                    <Setter Property="local:MouseBehaviour.MouseEnterAndDownCommand" Value="{Binding ChooseColor1}"/>
+                    <Setter Property="local:MouseBehaviour.MouseEnterAndRightDownCommand" Value="{Binding ChooseColor2}"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ColorPicker}" Value="False">
+                    <Setter Property="local:MouseBehaviour.MouseEnterAndDownCommand" Value="{Binding ChangeColor}"/>
+                    <Setter Property="local:MouseBehaviour.MouseEnterAndRightDownCommand" Value="{Binding ChangeColor2}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2"/>
+            </Grid.ColumnDefinitions>
+            <Canvas Grid.Row="0" Grid.Column="0" Uid="0 0" Background="{Binding CurrentFrame[0][0].ToColorString}"/>
+            <Canvas Grid.Row="0" Grid.Column="2" Uid="0 1" Background="{Binding CurrentFrame[0][1].ToColorString}"/>
+            <Canvas Grid.Row="0" Grid.Column="4" Uid="0 2" Background="{Binding CurrentFrame[0][2].ToColorString}"/>
+            <Canvas Grid.Row="0" Grid.Column="6" Uid="0 3" Background="{Binding CurrentFrame[0][3].ToColorString}"/>
+            <Canvas Grid.Row="0" Grid.Column="8" Uid="0 4" Background="{Binding CurrentFrame[0][4].ToColorString}"/>
+            <Canvas Grid.Row="0" Grid.Column="10" Uid="0 5" Background="{Binding CurrentFrame[0][5].ToColorString}"/>
+            <Canvas Grid.Row="0" Grid.Column="12" Uid="0 6" Background="{Binding CurrentFrame[0][6].ToColorString}"/>
+            <Canvas Grid.Row="0" Grid.Column="14" Uid="0 7" Background="{Binding CurrentFrame[0][7].ToColorString}"/>
+            <Canvas Grid.Row="0" Grid.Column="16" Uid="0 8" Background="{Binding CurrentFrame[0][8].ToColorString}"/>
+            <Canvas Grid.Row="0" Grid.Column="18" Uid="0 9" Background="{Binding CurrentFrame[0][9].ToColorString}"/>
+            <Canvas Grid.Row="2" Grid.Column="0" Uid="1 0" Background="{Binding CurrentFrame[1][0].ToColorString}"/>
+            <Canvas Grid.Row="2" Grid.Column="2" Uid="1 1" Background="{Binding CurrentFrame[1][1].ToColorString}"/>
+            <Canvas Grid.Row="2" Grid.Column="4" Uid="1 2" Background="{Binding CurrentFrame[1][2].ToColorString}"/>
+            <Canvas Grid.Row="2" Grid.Column="6" Uid="1 3" Background="{Binding CurrentFrame[1][3].ToColorString}"/>
+            <Canvas Grid.Row="2" Grid.Column="8" Uid="1 4" Background="{Binding CurrentFrame[1][4].ToColorString}"/>
+            <Canvas Grid.Row="2" Grid.Column="10" Uid="1 5" Background="{Binding CurrentFrame[1][5].ToColorString}"/>
+            <Canvas Grid.Row="2" Grid.Column="12" Uid="1 6" Background="{Binding CurrentFrame[1][6].ToColorString}"/>
+            <Canvas Grid.Row="2" Grid.Column="14" Uid="1 7" Background="{Binding CurrentFrame[1][7].ToColorString}"/>
+            <Canvas Grid.Row="2" Grid.Column="16" Uid="1 8" Background="{Binding CurrentFrame[1][8].ToColorString}"/>
+            <Canvas Grid.Row="2" Grid.Column="18" Uid="1 9" Background="{Binding CurrentFrame[1][9].ToColorString}"/>
+            <Canvas Grid.Row="4" Grid.Column="0" Uid="2 0" Background="{Binding CurrentFrame[2][0].ToColorString}"/>
+            <Canvas Grid.Row="4" Grid.Column="2" Uid="2 1" Background="{Binding CurrentFrame[2][1].ToColorString}"/>
+            <Canvas Grid.Row="4" Grid.Column="4" Uid="2 2" Background="{Binding CurrentFrame[2][2].ToColorString}"/>
+            <Canvas Grid.Row="4" Grid.Column="6" Uid="2 3" Background="{Binding CurrentFrame[2][3].ToColorString}"/>
+            <Canvas Grid.Row="4" Grid.Column="8" Uid="2 4" Background="{Binding CurrentFrame[2][4].ToColorString}"/>
+            <Canvas Grid.Row="4" Grid.Column="10" Uid="2 5" Background="{Binding CurrentFrame[2][5].ToColorString}"/>
+            <Canvas Grid.Row="4" Grid.Column="12" Uid="2 6" Background="{Binding CurrentFrame[2][6].ToColorString}"/>
+            <Canvas Grid.Row="4" Grid.Column="14" Uid="2 7" Background="{Binding CurrentFrame[2][7].ToColorString}"/>
+            <Canvas Grid.Row="4" Grid.Column="16" Uid="2 8" Background="{Binding CurrentFrame[2][8].ToColorString}"/>
+            <Canvas Grid.Row="4" Grid.Column="18" Uid="2 9" Background="{Binding CurrentFrame[2][9].ToColorString}"/>
+            <Canvas Grid.Row="6" Grid.Column="0" Uid="3 0" Background="{Binding CurrentFrame[3][0].ToColorString}"/>
+            <Canvas Grid.Row="6" Grid.Column="2" Uid="3 1" Background="{Binding CurrentFrame[3][1].ToColorString}"/>
+            <Canvas Grid.Row="6" Grid.Column="4" Uid="3 2" Background="{Binding CurrentFrame[3][2].ToColorString}"/>
+            <Canvas Grid.Row="6" Grid.Column="6" Uid="3 3" Background="{Binding CurrentFrame[3][3].ToColorString}"/>
+            <Canvas Grid.Row="6" Grid.Column="8" Uid="3 4" Background="{Binding CurrentFrame[3][4].ToColorString}"/>
+            <Canvas Grid.Row="6" Grid.Column="10" Uid="3 5" Background="{Binding CurrentFrame[3][5].ToColorString}"/>
+            <Canvas Grid.Row="6" Grid.Column="12" Uid="3 6" Background="{Binding CurrentFrame[3][6].ToColorString}"/>
+            <Canvas Grid.Row="6" Grid.Column="14" Uid="3 7" Background="{Binding CurrentFrame[3][7].ToColorString}"/>
+            <Canvas Grid.Row="6" Grid.Column="16" Uid="3 8" Background="{Binding CurrentFrame[3][8].ToColorString}"/>
+            <Canvas Grid.Row="6" Grid.Column="18" Uid="3 9" Background="{Binding CurrentFrame[3][9].ToColorString}"/>
+            <Canvas Grid.Row="8" Grid.Column="0" Uid="4 0" Background="{Binding CurrentFrame[4][0].ToColorString}"/>
+            <Canvas Grid.Row="8" Grid.Column="2" Uid="4 1" Background="{Binding CurrentFrame[4][1].ToColorString}"/>
+            <Canvas Grid.Row="8" Grid.Column="4" Uid="4 2" Background="{Binding CurrentFrame[4][2].ToColorString}"/>
+            <Canvas Grid.Row="8" Grid.Column="6" Uid="4 3" Background="{Binding CurrentFrame[4][3].ToColorString}"/>
+            <Canvas Grid.Row="8" Grid.Column="8" Uid="4 4" Background="{Binding CurrentFrame[4][4].ToColorString}"/>
+            <Canvas Grid.Row="8" Grid.Column="10" Uid="4 5" Background="{Binding CurrentFrame[4][5].ToColorString}"/>
+            <Canvas Grid.Row="8" Grid.Column="12" Uid="4 6" Background="{Binding CurrentFrame[4][6].ToColorString}"/>
+            <Canvas Grid.Row="8" Grid.Column="14" Uid="4 7" Background="{Binding CurrentFrame[4][7].ToColorString}"/>
+            <Canvas Grid.Row="8" Grid.Column="16" Uid="4 8" Background="{Binding CurrentFrame[4][8].ToColorString}"/>
+            <Canvas Grid.Row="8" Grid.Column="18" Uid="4 9" Background="{Binding CurrentFrame[4][9].ToColorString}"/>
+            <Canvas Grid.Row="10" Grid.Column="0" Uid="5 0" Background="{Binding CurrentFrame[5][0].ToColorString}"/>
+            <Canvas Grid.Row="10" Grid.Column="2" Uid="5 1" Background="{Binding CurrentFrame[5][1].ToColorString}"/>
+            <Canvas Grid.Row="10" Grid.Column="4" Uid="5 2" Background="{Binding CurrentFrame[5][2].ToColorString}"/>
+            <Canvas Grid.Row="10" Grid.Column="6" Uid="5 3" Background="{Binding CurrentFrame[5][3].ToColorString}"/>
+            <Canvas Grid.Row="10" Grid.Column="8" Uid="5 4" Background="{Binding CurrentFrame[5][4].ToColorString}"/>
+            <Canvas Grid.Row="10" Grid.Column="10" Uid="5 5" Background="{Binding CurrentFrame[5][5].ToColorString}"/>
+            <Canvas Grid.Row="10" Grid.Column="12" Uid="5 6" Background="{Binding CurrentFrame[5][6].ToColorString}"/>
+            <Canvas Grid.Row="10" Grid.Column="14" Uid="5 7" Background="{Binding CurrentFrame[5][7].ToColorString}"/>
+            <Canvas Grid.Row="10" Grid.Column="16" Uid="5 8" Background="{Binding CurrentFrame[5][8].ToColorString}"/>
+            <Canvas Grid.Row="10" Grid.Column="18" Uid="5 9" Background="{Binding CurrentFrame[5][9].ToColorString}"/>
+            <Canvas Grid.Row="12" Grid.Column="0" Uid="6 0" Background="{Binding CurrentFrame[6][0].ToColorString}"/>
+            <Canvas Grid.Row="12" Grid.Column="2" Uid="6 1" Background="{Binding CurrentFrame[6][1].ToColorString}"/>
+            <Canvas Grid.Row="12" Grid.Column="4" Uid="6 2" Background="{Binding CurrentFrame[6][2].ToColorString}"/>
+            <Canvas Grid.Row="12" Grid.Column="6" Uid="6 3" Background="{Binding CurrentFrame[6][3].ToColorString}"/>
+            <Canvas Grid.Row="12" Grid.Column="8" Uid="6 4" Background="{Binding CurrentFrame[6][4].ToColorString}"/>
+            <Canvas Grid.Row="12" Grid.Column="10" Uid="6 5" Background="{Binding CurrentFrame[6][5].ToColorString}"/>
+            <Canvas Grid.Row="12" Grid.Column="12" Uid="6 6" Background="{Binding CurrentFrame[6][6].ToColorString}"/>
+            <Canvas Grid.Row="12" Grid.Column="14" Uid="6 7" Background="{Binding CurrentFrame[6][7].ToColorString}"/>
+            <Canvas Grid.Row="12" Grid.Column="16" Uid="6 8" Background="{Binding CurrentFrame[6][8].ToColorString}"/>
+            <Canvas Grid.Row="12" Grid.Column="18" Uid="6 9" Background="{Binding CurrentFrame[6][9].ToColorString}"/>
+            <Canvas Grid.Row="14" Grid.Column="0" Uid="7 0" Background="{Binding CurrentFrame[7][0].ToColorString}"/>
+            <Canvas Grid.Row="14" Grid.Column="2" Uid="7 1" Background="{Binding CurrentFrame[7][1].ToColorString}"/>
+            <Canvas Grid.Row="14" Grid.Column="4" Uid="7 2" Background="{Binding CurrentFrame[7][2].ToColorString}"/>
+            <Canvas Grid.Row="14" Grid.Column="6" Uid="7 3" Background="{Binding CurrentFrame[7][3].ToColorString}"/>
+            <Canvas Grid.Row="14" Grid.Column="8" Uid="7 4" Background="{Binding CurrentFrame[7][4].ToColorString}"/>
+            <Canvas Grid.Row="14" Grid.Column="10" Uid="7 5" Background="{Binding CurrentFrame[7][5].ToColorString}"/>
+            <Canvas Grid.Row="14" Grid.Column="12" Uid="7 6" Background="{Binding CurrentFrame[7][6].ToColorString}"/>
+            <Canvas Grid.Row="14" Grid.Column="14" Uid="7 7" Background="{Binding CurrentFrame[7][7].ToColorString}"/>
+            <Canvas Grid.Row="14" Grid.Column="16" Uid="7 8" Background="{Binding CurrentFrame[7][8].ToColorString}"/>
+            <Canvas Grid.Row="14" Grid.Column="18" Uid="7 9" Background="{Binding CurrentFrame[7][9].ToColorString}"/>
+            <Canvas Grid.Row="16" Grid.Column="0" Uid="8 0" Background="{Binding CurrentFrame[8][0].ToColorString}"/>
+            <Canvas Grid.Row="16" Grid.Column="2" Uid="8 1" Background="{Binding CurrentFrame[8][1].ToColorString}"/>
+            <Canvas Grid.Row="16" Grid.Column="4" Uid="8 2" Background="{Binding CurrentFrame[8][2].ToColorString}"/>
+            <Canvas Grid.Row="16" Grid.Column="6" Uid="8 3" Background="{Binding CurrentFrame[8][3].ToColorString}"/>
+            <Canvas Grid.Row="16" Grid.Column="8" Uid="8 4" Background="{Binding CurrentFrame[8][4].ToColorString}"/>
+            <Canvas Grid.Row="16" Grid.Column="10" Uid="8 5" Background="{Binding CurrentFrame[8][5].ToColorString}"/>
+            <Canvas Grid.Row="16" Grid.Column="12" Uid="8 6" Background="{Binding CurrentFrame[8][6].ToColorString}"/>
+            <Canvas Grid.Row="16" Grid.Column="14" Uid="8 7" Background="{Binding CurrentFrame[8][7].ToColorString}"/>
+            <Canvas Grid.Row="16" Grid.Column="16" Uid="8 8" Background="{Binding CurrentFrame[8][8].ToColorString}"/>
+            <Canvas Grid.Row="16" Grid.Column="18" Uid="8 9" Background="{Binding CurrentFrame[8][9].ToColorString}"/>
+            <Canvas Grid.Row="18" Grid.Column="0" Uid="9 0" Background="{Binding CurrentFrame[9][0].ToColorString}"/>
+            <Canvas Grid.Row="18" Grid.Column="2" Uid="9 1" Background="{Binding CurrentFrame[9][1].ToColorString}"/>
+            <Canvas Grid.Row="18" Grid.Column="4" Uid="9 2" Background="{Binding CurrentFrame[9][2].ToColorString}"/>
+            <Canvas Grid.Row="18" Grid.Column="6" Uid="9 3" Background="{Binding CurrentFrame[9][3].ToColorString}"/>
+            <Canvas Grid.Row="18" Grid.Column="8" Uid="9 4" Background="{Binding CurrentFrame[9][4].ToColorString}"/>
+            <Canvas Grid.Row="18" Grid.Column="10" Uid="9 5" Background="{Binding CurrentFrame[9][5].ToColorString}"/>
+            <Canvas Grid.Row="18" Grid.Column="12" Uid="9 6" Background="{Binding CurrentFrame[9][6].ToColorString}"/>
+            <Canvas Grid.Row="18" Grid.Column="14" Uid="9 7" Background="{Binding CurrentFrame[9][7].ToColorString}"/>
+            <Canvas Grid.Row="18" Grid.Column="16" Uid="9 8" Background="{Binding CurrentFrame[9][8].ToColorString}"/>
+            <Canvas Grid.Row="18" Grid.Column="18" Uid="9 9" Background="{Binding CurrentFrame[9][9].ToColorString}"/>
+        </Grid>
+        <DockPanel Grid.Row="1" Height="36">
+            <ToggleButton DockPanel.Dock="Left" Margin="5,0,0,0" Style="{StaticResource MaterialDesignActionToggleButton}"
+                          ToolTip="MaterialDesignActionLightToggleButton"
+                          IsChecked="{Binding Play}">
+                <ToggleButton.Content>
+                    <materialDesign:PackIcon Kind="Play" />
+                </ToggleButton.Content>
+                <materialDesign:ToggleButtonAssist.OnContent>
+                    <materialDesign:PackIcon Kind="Pause" />
+                </materialDesign:ToggleButtonAssist.OnContent>
+            </ToggleButton>
+            <TextBlock Text="{Binding FrameIndexPlus1}" Width="Auto" TextAlignment="Right" DockPanel.Dock="Left" Margin="15,5,0,5" VerticalAlignment="Center"/>
+            <TextBlock Text="/" Width="Auto" DockPanel.Dock="Left" Margin="0,5" VerticalAlignment="Center"/>
+            <TextBlock Text="{Binding Frames.Count}" Width="Auto" DockPanel.Dock="Left" Margin="0,5,5,5" VerticalAlignment="Center"/>
+            <Slider Minimum="1" Maximum="{Binding Frames.Count}" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    ToolTip="MaterialDesignDiscreteSlider"
+                    Value="{Binding FrameIndexPlus1}"
+                    Width="200"
+                    Margin="20,0"/>
+        </DockPanel>
+        <ScrollViewer  Grid.Column="1" Grid.RowSpan="1">
+            <StackPanel  Orientation="Vertical" Width="60">
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Background="{Binding Color1ToString}" Foreground="{Binding Color1ToString}" BorderBrush="{Binding Color1ToString}" Margin="0,5,0,5"
+                    Command="{Binding ColorPallette}"/>
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Background="{Binding Color2ToString}" Foreground="{Binding Color2ToString}" BorderBrush="{Binding Color2ToString}" Margin="0,5,0,5"
+                    Command="{Binding ColorPallette2}"/>
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Width="20" Height="20" Margin="5,5,0,0" Command="{Binding DeleteFrame}"
+                        ToolTip="Remove current frame">
+                        <materialDesign:PackIcon Kind="Minus"/>
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}"  Width="20" Height="20" Margin="8,5,0,0" Command="{Binding NewFrame}"
+                        ToolTip="Append new frame">
+                        <materialDesign:PackIcon Kind="Plus"/>
+                    </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Width="20" Height="20" Margin="5,5,0,0" Command="{Binding PrevFrame}"
+                        ToolTip="View Prev Frame">
+                        <materialDesign:PackIcon Kind="ArrowLeft"/>
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}"  Width="20" Height="20" Margin="8,5,0,0" Command="{Binding NextFrame}"
+                        ToolTip="View Next Frame">
+                        <materialDesign:PackIcon Kind="ArrowRight"/>
+                    </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <materialDesign:PackIcon Kind="Speedometer" Foreground="{Binding ElementName=SpeedBox, Path=BorderBrush}" Margin="0,8,0,0"/>
+                    <TextBox Width="30" Text="{Binding FramesPerSecond, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True}" x:Name="SpeedBox" TextAlignment="Center" ToolTip="Change Frames Per Second"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Width="20" Height="20" Margin="5,5,0,0" Command="{Binding Copy}"
+                        ToolTip="Copy frame">
+                        <materialDesign:PackIcon Kind="ContentCopy"/>
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}"  Width="20" Height="20" Margin="8,5,0,0" Command="{Binding Paste}"
+                        ToolTip="Paste">
+                        <materialDesign:PackIcon Kind="ContentPaste"/>
+                    </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Width="20" Height="20" Margin="5,5,0,0" Command="{Binding SaveCanvases}"
+                        ToolTip="Save Animation">
+                        <materialDesign:PackIcon Kind="ContentSave"/>
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}"  Width="20" Height="20" Margin="8,5,0,0" Command="{Binding OpenImages}"
+                        ToolTip="Load Animation">
+                        <materialDesign:PackIcon Kind="FolderUpload"/>
+                    </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Width="20" Height="20" Margin="5,5,0,0" Command="{Binding RotateLeft}"
+                        ToolTip="Save Animation">
+                        <materialDesign:PackIcon Kind="RotateLeft"/>
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}"  Width="20" Height="20" Margin="8,5,0,0" Command="{Binding RotateRight}"
+                        ToolTip="Load Animation">
+                        <materialDesign:PackIcon Kind="RotateRight"/>
+                    </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <ToggleButton DockPanel.Dock="Left" Margin="5,5,0,0" Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"
+                            ToolTip="Color Picker"
+                            IsChecked="{Binding ColorPicker}" Width="20" Height="20">
+                        <ToggleButton.Content>
+                            <materialDesign:PackIcon Kind="Eyedropper" />
+                        </ToggleButton.Content>
+                    </ToggleButton>
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}"  Width="20" Height="20" Margin="8,5,0,0" Command="{Binding RotateRight}"
+                        ToolTip="Remove All">
+                    <materialDesign:PackIcon Kind="DeleteForever"/>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
